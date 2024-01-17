@@ -112,9 +112,7 @@
 
 
         // Define an array of home icon coordinates
-        var homeCoordinates = [
-            { lat: 37.5015, lng: -105.2001},
-            { lat: 37.5007, lng: -105.2073},
+        var parttimehomeCoordinates = [
             { lat: 37.5003, lng: -105.2083},
             { lat: 37.4979, lng: -105.2134},
             { lat: 37.4986, lng: -105.2138},
@@ -143,16 +141,33 @@
             { lat: 37.44736646241947, lng: -105.16558597671967},
         ];
 
-        var homeIcon = L.icon({
-            iconUrl: 'home.png', // Replace with the path to your home icon image
+        var fulltimehomeCoordinates = [
+            { lat: 37.50079918462833, lng: -105.20736339119641},
+            { lat: 37.50148790011579, lng: -105.20007717673346}
+        ];
+
+        var fulltimehomeIcon = L.icon({
+            iconUrl: 'full-time.png', // Replace with the path to your home icon image
             iconSize: [32, 32], // Adjust the size as needed
             iconAnchor: [16, 32], // The anchor point of the icon (center bottom)
         });
 
-        homeCoordinates.forEach(function(coord) {
-            var homeMarker = L.marker([coord.lat, coord.lng], { icon: homeIcon }).addTo(map);
+        fulltimehomeCoordinates.forEach(function(coord) {
+            var homeMarker = L.marker([coord.lat, coord.lng], { icon: fulltimehomeIcon }).addTo(map);
             homeMarker.bindTooltip('Home', { direction: 'top' });
         });
+
+        var parttimehomeIcon = L.icon({
+            iconUrl: 'part-time.png', // Replace with the path to your home icon image
+            iconSize: [32, 32], // Adjust the size as needed
+            iconAnchor: [16, 32], // The anchor point of the icon (center bottom)
+        });
+
+        parttimehomeCoordinates.forEach(function(coord) {
+            var homeMarker = L.marker([coord.lat, coord.lng], { icon: parttimehomeIcon }).addTo(map);
+            homeMarker.bindTooltip('Home', { direction: 'top' });
+        });
+
 
 
     </script>
