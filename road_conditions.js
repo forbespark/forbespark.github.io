@@ -76,4 +76,11 @@ function addRoadConditions() {
 
     //Foy Place
     L.polyline(Foy_PL_seg1, { color: 'green' }).addTo(map);
+
+    //Terry Place
+    L.polyline(Terry_PL_seg1, {color: 'orange'}).addTo(map);
+
+    //Grojean Drive
+    L.polyline(Grojean_DR_seg1, {color: 'orange'}).addTo(map);
+
 }
