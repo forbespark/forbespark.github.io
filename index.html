@@ -38,10 +38,18 @@
 
         addRoadConditions();
 
+        var camIcon = L.icon({
+        iconUrl: './icons/cam.png',
+        iconSize: [32, 32],
+        iconAnchor: [16, 32] });
+
+        var camLocation = L.marker([37.50216, -105.19976], {icon: camIcon}).addTo(map);
+        camLocation.bindPopup('<img src="road.jpeg" alt="Road" style="width:600px; height:auto;">', {maxWidth: "auto"});
+        
         var fulltimehomeIcon = L.icon({
-            iconUrl: 'full-time.png', // Replace with the path to your home icon image
-            iconSize: [32, 32], // Adjust the size as needed
-            iconAnchor: [16, 32], // The anchor point of the icon (center bottom)
+            iconUrl: './icons/full-time.png', 
+            iconSize: [32, 32], 
+            iconAnchor: [16, 32], 
         });
 
         fulltimehomeCoordinates.forEach(function(coord) {
@@ -50,9 +58,9 @@
         });
 
         var parttimehomeIcon = L.icon({
-            iconUrl: 'part-time.png', // Replace with the path to your home icon image
-            iconSize: [32, 32], // Adjust the size as needed
-            iconAnchor: [16, 32], // The anchor point of the icon (center bottom)
+            iconUrl: './icons/part-time.png', 
+            iconSize: [32, 32], 
+            iconAnchor: [16, 32],
         });
 
         parttimehomeCoordinates.forEach(function(coord) {
