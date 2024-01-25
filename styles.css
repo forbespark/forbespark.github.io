@@ -4,15 +4,6 @@
         height: 100vh; /* Adjust as needed */
         /* Other styles */
     }
-
-    .legends-container {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        /* Other styles */
-    }
-
-    /* Ensure map and other elements layout correctly */
 }
 
 #map {
