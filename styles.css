@@ -1,16 +1,13 @@
-@media screen and (max-width: 600px) {
-    .sidebar {
+@media screen and (max-width: 768px) {
+    .legends-container {
+        position: fixed; /* or 'absolute' depending on your layout */
+        bottom: 0;
+        left: 0;
         width: 100%;
-        height: auto;
-        position: relative;
-    }
-    .sidebar h3, .sidebar p {
-        font-size: 18px;
-    }
-    #map {
-        margin-left: 0;
+        /* Other styling as needed */
     }
 }
+
 
 #map {
     height: 1200px;
