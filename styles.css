@@ -1,22 +1,20 @@
 @media screen and (max-width: 768px) {
-    .legends-container {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: white; /* Or the color that matches your design */
-        box-shadow: 0 -2px 5px rgba(0,0,0,0.2); /* Optional: adds a shadow for better visibility */
-    }
-
     .sidebar {
-        /* Adjustments to the sidebar for mobile view, if needed */
+        position: relative; /* Ensure sidebar is positioned */
+        height: 100vh; /* Adjust as needed */
+        /* Other styles */
     }
 
-    #map {
-        /* Ensure the map does not overlap with the legends */
-        margin-bottom: 60px; /* Adjust this value based on the height of your legends container */
+    .legends-container {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Other styles */
     }
+
+    /* Ensure map and other elements layout correctly */
 }
+
 
 
 
