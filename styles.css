@@ -1,27 +1,50 @@
+
 #map {
     height: 1200px;
     width: 100%;
+    margin-left: 200px;
 }
 
 /* Style for the legend container */
 .legends-container {
-    display: flex;
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000;
+    bottom: 0;
+    width: 100%;
+    text-align: center; /* Center align the legend boxes */
+    padding: 10px 0;
+    margin-bottom: 20px;
 }
 
 /* Style for each legend box */
 .legend-box {
-    background-color: white;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 20px;
+    display: block; /* Stack the legends vertically */
+    margin: 5px auto; /* Center the legend boxes with auto margins */
+    padding: 5px;
+    border: 1px solid #ddd; /* Optional: add a border */
 }
 
 /* Style for the legends inside each box */
 .legend {
     color: green; /* Adjust the color for each legend as needed */
+}
+
+.sidebar {
+    height: 100vh; /* Full height of the viewport */
+    width: 200px; /* Width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #979797; /* Sidebar background color */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+/* Style sidebar links */
+.sidebar h3, .sidebar p {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
 }
