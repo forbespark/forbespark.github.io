@@ -33,3 +33,27 @@ var parttimehomeCoordinates = [
 var fulltimehomeCoordinates = [
 
 ];
+
+function homesLocation (){
+var fulltimehomeIcon = L.icon({
+    iconUrl: './icons/full-time.png', 
+    iconSize: [32, 32], 
+    iconAnchor: [16, 32], 
+});
+
+fulltimehomeCoordinates.forEach(function(coord) {
+    var homeMarker = L.marker([coord.lat, coord.lng], { icon: fulltimehomeIcon }).addTo(map);
+    homeMarker.bindTooltip('Home', { direction: 'top' });
+});
+
+var parttimehomeIcon = L.icon({
+    iconUrl: './icons/part-time.png', 
+    iconSize: [32, 32], 
+    iconAnchor: [16, 32],
+});
+
+parttimehomeCoordinates.forEach(function(coord) {
+    var homeMarker = L.marker([coord.lat, coord.lng], { icon: parttimehomeIcon }).addTo(map);
+    homeMarker.bindTooltip('Home', { direction: 'top' });
+});
+}

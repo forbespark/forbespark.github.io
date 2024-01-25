@@ -1,5 +1,5 @@
 
-function addRoadConditions() {
+function roadConditions() {
     // Forbes Park Road Condition
     L.polyline(ForbesParkRD_seg1, { color: 'green' }).addTo(map).bindTooltip('Updated on 1/15/24 2:02AM', { direction: 'auto' });
     L.polyline(ForbesParkRD_seg2, { color: 'green' }).addTo(map);

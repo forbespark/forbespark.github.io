@@ -31,59 +31,27 @@
     
 
 
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="road_coordinates.js"></script>
     <script src="road_conditions.js"></script>
     <script src="residents.js"></script>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="cams.js"></script>
     <script>
-        // Create a map centered at New York City
-        var map = L.map('map').setView([37.45, -105.21], 13); // Zoom level 12
+        // Create a map centered at Forbes Park 
+        var map = L.map('map').setView([37.45, -105.21], 13); 
         
         // Add a base map layer (e.g., OpenStreetMap)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 20,
         }).addTo(map);
 
-        addRoadConditions();
+        roadConditions();
 
-        var camIcon = L.icon({
-        iconUrl: './icons/cam.png',
-        iconSize: [32, 32],
-        iconAnchor: [16, 32] });
+        camsLocations();
 
-        var camLocation = L.marker([37.50215, -105.1998], {icon: camIcon}).addTo(map);
-        camLocation.bindPopup('<img src="./road_cams/emery_lp_1.jpg" alt="Emery Loop" style="width:600px; height:auto;">', {maxWidth: "auto"});
+        homesLocation();
 
-        var camLocation = L.marker([37.50158, -105.2023], {icon: camIcon}).addTo(map);
-        camLocation.bindPopup('<img src="./road_cams/macomber_ln_1.jpg" alt="Macomber Lane" style="width:600px; height:auto;">', {maxWidth: "auto"});
-        
-        var camLocation = L.marker([37.50115, -105.2042], {icon: camIcon}).addTo(map);
-        camLocation.bindPopup('<img src="./road_cams/emery_lp_2.jpg" alt="Emery Loop" style="width:600px; height:auto;">', {maxWidth: "auto"});
-    
-        var camLocation = L.marker([37.49844, -105.2172], {icon: camIcon}).addTo(map);
-        camLocation.bindPopup('<img src="./road_cams/singer_ln_1.jpg" alt="Emery Loop" style="width:600px; height:auto;">', {maxWidth: "auto"});
-
-        var fulltimehomeIcon = L.icon({
-            iconUrl: './icons/full-time.png', 
-            iconSize: [32, 32], 
-            iconAnchor: [16, 32], 
-        });
-
-        fulltimehomeCoordinates.forEach(function(coord) {
-            var homeMarker = L.marker([coord.lat, coord.lng], { icon: fulltimehomeIcon }).addTo(map);
-            homeMarker.bindTooltip('Home', { direction: 'top' });
-        });
-
-        var parttimehomeIcon = L.icon({
-            iconUrl: './icons/part-time.png', 
-            iconSize: [32, 32], 
-            iconAnchor: [16, 32],
-        });
-
-        parttimehomeCoordinates.forEach(function(coord) {
-            var homeMarker = L.marker([coord.lat, coord.lng], { icon: parttimehomeIcon }).addTo(map);
-            homeMarker.bindTooltip('Home', { direction: 'top' });
-        });
     </script>
 </body>
 </html>
