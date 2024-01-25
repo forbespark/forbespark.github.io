@@ -21,6 +21,8 @@
     margin: 5px auto; /* Center the legend boxes with auto margins */
     padding: 5px;
     border: 1px solid #ddd; /* Optional: add a border */
+    margin-left: 10px; /* Left margin */
+    margin-right: 10px; /* Right margin */
 }
 
 /* Style for the legends inside each box */
@@ -35,9 +37,11 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #979797; /* Sidebar background color */
+    background-color: white; /* Sidebar background color */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
+    font-style: normal;
+    color: black;
 }
 
 /* Style sidebar links */
@@ -45,6 +49,6 @@
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: gray;
     display: block;
 }
