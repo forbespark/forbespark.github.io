@@ -15,9 +15,6 @@
     /* Ensure map and other elements layout correctly */
 }
 
-
-
-
 #map {
     height: 1200px;
     width: 100%;
@@ -26,12 +23,8 @@
 
 /* Style for the legend container */
 .legends-container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center; /* Center align the legend boxes */
+    /* Adjust or remove positioning styles if needed */
     padding: 10px 0;
-    margin-bottom: 20px;
 }
 
 /* Style for each legend box */
