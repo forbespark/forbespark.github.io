@@ -21,9 +21,10 @@
     margin: 5px auto; /* Center the legend boxes with auto margins */
     padding: 5px;
     border: 1px solid #ddd; /* Optional: add a border */
-    margin-left: 10px; /* Left margin */
+    margin-left: 15px; /* Left margin */
     margin-right: 10px; /* Right margin */
 }
+
 
 /* Style for the legends inside each box */
 .legend {
